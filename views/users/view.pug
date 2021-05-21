@@ -1,5 +1,17 @@
-h1 View user 
+extends ../layouts/common.pug
 
-p 
-  b Name 
-  span= user.name
+block content
+  h1 View user 
+
+  p 
+    b Id 
+    span= user.id
+    br
+    b Name 
+    span= user.name
+    br
+    b Phone
+    span= user.phone
+    br
+    b Email 
+    span= user.email

@@ -3,6 +3,20 @@ html
     link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x", crossorigin="anonymous")
     link(ref="stylesheet", href="/styles/custom.css")
   body
-    if user
-      h1(style='color:red')= user.name
-    block content
+    //- if user
+    //-   h1(style='color:red')= user.name
+
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container-fluid
+        a.navbar-brand(href='#') LeanExpressJS
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item
+              a.nav-link.active(aria-current='page', href='/') Home
+            li.nav-item
+              a.nav-link(href='/users') Users
+
+    .container.pt-5
+      block content

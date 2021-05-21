@@ -2,18 +2,21 @@ extends ../layouts/common.pug
 
 block content
   h1 Users
-
-  a(href="/users/create") New
+    
+  a.mb-1.btn.btn-primary(href="/users/create") New
 
   form(action="/users/search", method="GET", class="d-flex")
     input(type="text", name="q", class="form-control")
     button(class="btn btn-primary") Search
 
-  ul
+  table.table
+    tr 
+      th Name
+      th Phone
+
     each user in users
-      li
-        span= user.name
-        span &nbsp
-        span= user.phone
-        span &nbsp
-        a(href='/users/' + user.id) View
+      tr
+        td= user.name
+        td= user.phone
+        td
+          a.btn.btn-link(href='/users/' + user.id) View
