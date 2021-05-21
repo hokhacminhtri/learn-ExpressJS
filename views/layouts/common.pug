@@ -7,7 +7,7 @@ html
     //-   h1(style='color:red')= user.name
 
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      .container-fluid
+      .container
         a.navbar-brand(href='#') LeanExpressJS
         button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
@@ -17,6 +17,9 @@ html
               a.nav-link.active(aria-current='page', href='/') Home
             li.nav-item
               a.nav-link(href='/users') Users
+            li.nav-item
+              a.nav-link(href='/products') Products
+              
 
     .container.pt-5
       block content
